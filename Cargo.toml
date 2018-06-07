@@ -1,0 +1,10 @@
+[package]
+name = "words"
+version = "0.1.0"
+authors = ["n0_3nnui"]
+
+[dependencies]
+
+[lib]
+name = "words"
+path = "src/words.rs"
