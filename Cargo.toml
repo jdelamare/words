@@ -2,6 +2,8 @@
 name = "words"
 version = "0.1.0"
 authors = ["n0_3nnui"]
+description = "Access all of the words in `/usr/share/dict/words`"
+license = "MIT"
 
 [dependencies]
 
