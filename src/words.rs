@@ -25,6 +25,7 @@ impl Words {
     /// # Examples
     ///
     /// ``` 
+    /// use words::*;
     /// let wordy = Words::new();
     /// 
     /// assert_eq!(wordy.words.len(), 0);
@@ -41,10 +42,11 @@ impl Words {
     /// # Examples
     ///
     /// ```
-    /// let wordy = Words::new();
+    /// use words::*;
+    /// let mut wordy = Words::new();
     /// wordy.populate();
     /// 
-    /// assert_new!(wordy.words.len(), 0);
+    /// assert_ne!(wordy.words.len(), 0);
     /// ```
     #[allow(unused)]
     pub fn populate(&mut self) {    // TODO: return result type?
@@ -60,7 +62,8 @@ impl Words {
     /// # Examples
     ///
     /// ```
-    /// let wordy = Words::new();
+    /// use words::*;
+    /// let mut wordy = Words::new();
     /// wordy.populate();
     /// let word = wordy.get("parenthesis".to_string());
     /// assert_eq!(word, "parenthesis".to_string());
@@ -80,7 +83,8 @@ impl Words {
     /// # Examples
     ///
     /// ```
-    /// let wordy = Words::new();
+    /// use words::*;
+    /// let mut wordy = Words::new();
     /// wordy.populate();
     /// let w0 = wordy.exists("kaleidoscope".to_string());
     /// let w1 = wordy.exists("kaleidescope".to_string());
@@ -89,7 +93,7 @@ impl Words {
     /// ```
     #[allow(unused)]
     pub fn exists(&self, query: String) -> bool {
-        match self.words.binary_search(&"the".to_string()) {    
+        match self.words.binary_search(&query) {    
             Ok(_) => return true,
             Err(_) => return false
         }
