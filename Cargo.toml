@@ -1,6 +1,6 @@
 [package]
 name = "words"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["n0_3nnui"]
 description = "Access all of the words in `/usr/share/dict/words`"
 license = "MIT"
