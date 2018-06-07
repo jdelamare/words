@@ -29,6 +29,7 @@ impl Words {
     /// 
     /// assert_eq!(wordy.words.len(), 0);
     /// ```
+    #[allow(unused)]
     fn new() -> Words { // perhaps merge new and populate?
         Words {
             words: vec![]
@@ -45,6 +46,7 @@ impl Words {
     /// 
     /// assert_new!(wordy.words.len(), 0);
     /// ```
+    #[allow(unused)]
     fn populate(&mut self) {    // TODO: return result type?
         let file = File::open("/usr/share/dict/words").expect("/usr/share/dict/words DNE");
         for line in BufReader::new(file).lines() {
@@ -63,6 +65,7 @@ impl Words {
     /// let word = wordy.get("parenthesis".to_string());
     /// assert_eq!(word, "parenthesis".to_string());
     /// ```
+    #[allow(unused)]
     fn get(&self, query: String) -> String {    
         // binary search returns a Result containing the index where
         // the item exists, or an error and the index where it could be inserted
@@ -84,9 +87,10 @@ impl Words {
     /// assert_eq!(w0, true);
     /// assert_eq!(w1, false);
     /// ```
+    #[allow(unused)]
     fn exists(&self, query: String) -> bool {
         match self.words.binary_search(&"the".to_string()) {    
-            Ok(x) => return true,
+            Ok(_) => return true,
             Err(_) => return false
         }
     }
